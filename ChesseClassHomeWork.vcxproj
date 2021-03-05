@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="ChesseClassHomeWork.cpp" />
     <ClCompile Include="Figure.cpp" />
+    <ClCompile Include="King.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Figure.h" />
+    <ClInclude Include="King.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,12 +1,4 @@
 /*Реализовать игру шахматы. В игре у нас будут участвовать только конь и король. Игроки делают ходы последовательно.
-У нас будет базовый класс :
-class Figure
-{ 
-    Figure(xPos, yPos) - устанавливает фигуру в начальное положение
-    Color GetColor()  // Black и White
-    GetFigureId() - у каждой фигуры есть идентификатор, тип не важен, главное чтобы он был уникальным
-    SetCurrentCoordinates(xPos, yPos)
-};
 
 class King  // наследуется от Figure 
 {
@@ -25,8 +17,15 @@ class СhessField {
 };*/
 
 #include <iostream>
+#include "Figure.h"
+#include "King.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    King king;
+    king.SetCurrentCoordinates(2, 3);
+    king.SetFigureId(1);
+    
+
+    std::cout << king.CanMoveToPosition(1, 2);
 }
