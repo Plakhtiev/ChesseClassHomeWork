@@ -21,5 +21,5 @@ int main()
     king.SetFigureId(1);
     
 
-    std::cout << king.CanMoveToPosition(1, 2);
+    std::cout << king.GetFigureId();
 }

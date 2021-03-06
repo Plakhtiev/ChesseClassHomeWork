@@ -4,6 +4,7 @@ Figure::Figure(int xPos, int yPos)
 {
 	m_pxPos = new int{ xPos };
 	m_pyPos = new int{ yPos };	
+	m_pfigureId = new int;
 }
 
 Figure::Figure(int xPos, int yPos, int figureId)
@@ -15,11 +16,13 @@ Figure::Figure(int xPos, int yPos, int figureId)
 
 Figure::Figure()
 {
+	m_pxPos = new int;
+	m_pyPos = new int;
+	m_pfigureId = new int;
 }
 
-
-void beCreated(int* field, int val) {
-
+void Figure::beCreated(int* field, int val)
+{
 	if (field) {
 		*field = val;
 	}
@@ -30,28 +33,14 @@ void beCreated(int* field, int val) {
 
 void Figure::SetFigureId(int figureId)
 {
-	if (m_pfigureId) {
-		*m_pfigureId = figureId;
-	}
-	else {
-		m_pfigureId = new int{ figureId };
-	}
+	beCreated(m_pfigureId, figureId);
 }
 
 void Figure::SetCurrentCoordinates(int xPos, int yPos)
 {
-	if (m_pxPos) {
-		*m_pxPos = xPos;
-	}
-	else {
-		m_pxPos = new int{ xPos };
-	}
-	if (m_pyPos) {
-		*m_pyPos = yPos;
-	}
-	else {
-		m_pyPos = new int{ yPos };
-	}
+	beCreated(m_pxPos, xPos);
+	beCreated(m_pyPos, yPos);
+	
 }
 
 

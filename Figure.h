@@ -5,6 +5,8 @@ public:
 	Figure();
 	Figure(int xPos, int yPos);
 	Figure(int xPos, int yPos, int figureId);
+
+	void beCreated(int* field, int val);
 	char GetColor();
 	int GetFigureId();
 	void SetFigureId(int figureId);
