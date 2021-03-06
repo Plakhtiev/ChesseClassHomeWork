@@ -1,11 +1,13 @@
 #include "King.h"
 
-bool MoveKingDirect(int pos1, int pos2) {
-    return (pos1 - 1 == pos2 || pos1 + 1 == pos2);
+bool King::MoveKingDiag(int pos1, int pos2)
+{
+    return (pos1 - 1 == pos2);
 }
 
-bool MoveKingDiag(int pos1, int pos2) {
-    return (pos1 - 1 == pos2);
+bool King::MoveKingDirect(int pos1, int pos2)
+{
+    return (pos1 - 1 == pos2 || pos1 + 1 == pos2);
 }
 
 bool King::CanMoveToPosition(int xPos, int yPos)
