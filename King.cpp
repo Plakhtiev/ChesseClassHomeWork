@@ -22,3 +22,8 @@ bool King::CanMoveToPosition(int xPos, int yPos)
     bool diag = (diagUp || diagDown);
     return (direct || diag);
 }
+
+char King::GetFigereId()
+{
+    return m_figureId;
+}
