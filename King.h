@@ -4,12 +4,14 @@ class King :
     public Figure
 {
 public:
+    King(int xPos, int yPos, Color color) :
+        Figure(xPos, yPos, color)
+    {
 
+    }
     bool CanMoveToPosition(int xPos, int yPos);
     char GetFigereId();
 
 private:
-    bool MoveKingDiag(int pos1, int pos2);
-    bool MoveKingDirect(int pos1, int pos2);
     const char m_figureId = 'K';
 };

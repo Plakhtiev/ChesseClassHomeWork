@@ -4,11 +4,14 @@ class Horse :
     public Figure
 {
 public:
+    Horse(int xPos, int yPos, Color color) :
+        Figure(xPos, yPos, color)
+    {
+    }
+
     bool CanMoveToPosition(int xPos, int yPos);
     char GetFigureId();
 private:
-    bool MoveHorseOneStep(int point1, int point2);
-    bool MoveHorseTwoStep(int point1, int point2);
     const char m_figureId = 'H';
 };
 
