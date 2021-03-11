@@ -1,5 +1,4 @@
-#include "King.h"
-
+#include "King.h" 
 
 bool King::CanMoveToPosition(int xPos, int yPos)
 {
@@ -14,7 +13,7 @@ bool King::CanMoveToPosition(int xPos, int yPos)
     return (direct || diag);
 }
 
-char King::GetFigereId()
+std::string King::GetFigureId()
 {
     return m_figureId;
 }

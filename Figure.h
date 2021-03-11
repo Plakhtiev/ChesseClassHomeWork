@@ -11,16 +11,18 @@ class Figure
 {
 public:
 
-	Figure(int xPos, int yPos, Color color);
-
-	
 	char GetColor();
 	void SetCurrentCoordinates( int xPos, int yPos);
 	int GetX();
 	int GetY();
 	bool MoveDirect(int startPos, int endPos, int step);
+
+protected:
+	Figure(int xPos, int yPos, Color color, const std::string& id);
+
 private:
 	Color m_color;
+	std::string m_id;
 	int m_xPos;
 	int m_yPos;	
 };

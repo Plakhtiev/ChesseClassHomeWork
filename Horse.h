@@ -5,13 +5,13 @@ class Horse :
 {
 public:
     Horse(int xPos, int yPos, Color color) :
-        Figure(xPos, yPos, color)
+        Figure(xPos, yPos, color, m_figureId)
     {
     }
 
     bool CanMoveToPosition(int xPos, int yPos);
-    char GetFigureId();
-private:
-    const char m_figureId = 'H';
-};
+    std::string GetFigureI();
 
+private:
+    const std::string m_figureId = "Horse";
+};

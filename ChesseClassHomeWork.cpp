@@ -19,6 +19,6 @@ int main()
    // horse.SetCurrentCoordinates(8, 8);
 
 
-    std::cout << king.CanMoveToPosition(6, 7)<< std::endl;
+   std::cout << king.CanMoveToPosition(6, 7)<< std::endl;
    std::cout << horse.CanMoveToPosition(6, 9) << std::endl;
 }

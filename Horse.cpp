@@ -1,5 +1,6 @@
 #include "Horse.h"
 
+
 bool Horse::CanMoveToPosition(int xPos, int yPos)
 {
 	int x = GetX();
@@ -9,7 +10,7 @@ bool Horse::CanMoveToPosition(int xPos, int yPos)
 	return (leftOrRight || upOrDown);
 }
 
-char Horse::GetFigureId()
+std::string Horse::GetFigureI()
 {
 	return m_figureId;
 }

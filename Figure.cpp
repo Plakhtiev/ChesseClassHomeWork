@@ -1,21 +1,18 @@
 #include "Figure.h"
 
-
-
-Figure::Figure(int xPos, int yPos, Color color) :
-	m_color (color),
+Figure::Figure(int xPos, int yPos, Color color, const std::string& id) :
+	m_color(color),
 	m_xPos(xPos),
-	m_yPos(yPos)
+	m_yPos(yPos),
+	m_id(id)
 {
-
 }
 
 void Figure::SetCurrentCoordinates(int xPos, int yPos)
 {
 	m_xPos = xPos;
-	m_yPos= yPos;	
+	m_yPos = yPos;
 }
-
 
 int Figure::GetX()
 {
@@ -33,7 +30,6 @@ bool Figure::MoveDirect(int startPos, int endPos, int step) // can move direct
 		return false;
 	}
 	return (startPos - step == endPos || startPos + step == endPos);
-	
 }
 
 char Figure::GetColor()
